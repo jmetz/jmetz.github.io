@@ -8,6 +8,6 @@ category: tutorial
 
 With stuff
 
-```
+```py
 print("Hello, world")
 ```
