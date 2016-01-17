@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title: Test tutorial
 category: tutorial
 ---
