@@ -1,6 +1,6 @@
 ---
 layout: default
-name: All Blog Posts
+title: All Blog Posts
 ---
 
 # All posts
