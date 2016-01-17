@@ -1,4 +1,4 @@
 name: JMetz's homepage
-syntax-highlighting:
-  enabled : true
-  #highlighter: pygments
+#syntax-highlighting:
+#  enabled : true
+#  #highlighter: pygments
