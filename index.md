@@ -1,6 +1,6 @@
 ---
 title: JMetz's personal site
-layout: homepage
+layout: default
 ---
 
 Welcome to my personal website. 
