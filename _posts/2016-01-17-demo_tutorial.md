@@ -8,6 +8,6 @@ category: tutorial
 
 With stuff
 
-{% highlight python %}
+{% highlight Python %}
 print("Hello, world")
 {% endhighlight %}
