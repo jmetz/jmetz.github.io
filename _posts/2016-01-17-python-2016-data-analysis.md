@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Python 2016: Data analysis
+title: "Python 2016: Data analysis"
 category: tutorial,python-2016,python
 ---
 
