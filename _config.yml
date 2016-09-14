@@ -6,4 +6,5 @@ author: J. Metz
 collections:
   intropython2016:
     output : true
-  - advancedpython2016
+  advancedpython2016:
+    output : true
