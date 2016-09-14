@@ -105,7 +105,7 @@ a realistic script to
 loop over all CSV files in a folder (and subfolders), and 
 generate a statistical plot for each one, including titles etc!**
 
-![Sample result](content/python2016_intro/images/sample_result.png)
+![Sample result](images/sample_result.png)
 
 ("Time-series" generated using `numpy`s random number generator).  
 
