@@ -40,7 +40,8 @@
               <ul class="dropdown-menu">
                 {% for tutorial in site.collections %}
                 <li>
-                  <a href="{{ tutorial.directory }}">{{ tutorial.label }}</a>
+                  {% assign page = tutorial.first %}
+                  <a href="{{ page.url }}">{{ tutorial.label }}</a>
                 </li>
                 {% endfor %}
               </ul>
