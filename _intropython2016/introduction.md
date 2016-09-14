@@ -1,6 +1,7 @@
 ---
 collection: intropython2016
 title: intropython2016 introduction
+layout: default
 ---
 [![XKCD comic](images/python.png)](http://xkcd.com/353/)
 
