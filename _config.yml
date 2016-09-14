@@ -3,3 +3,6 @@ author: J. Metz
 #syntax-highlighting:
 #  enabled : true
 #  #highlighter: pygments
+collections:
+  - intropython2016
+  - advancedpython2016
