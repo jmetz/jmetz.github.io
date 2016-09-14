@@ -7,7 +7,7 @@ Welcome!
 
 {% for page in site.intropython2016 limit:3 %}
 <li>
-    <a href="{{ page.url }}">{{ album.title }}</a>
-    <p>{{ album.short-description }}</p>
+    <a href="{{ page.url }}">{{ page.title }}</a>
+    <p>{{ page.short-description }}</p>
 </li>
 {% endfor %}
