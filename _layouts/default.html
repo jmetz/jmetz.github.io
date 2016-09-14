@@ -40,7 +40,7 @@
               <ul class="dropdown-menu">
                 {% for tutorial in site.collections %}
                 <li>
-                  <a href="{{ tutorial.url }}">{{ tutorial.title }}</a>
+                  <a href="{{ tutorial.directory }}">{{ tutorial.label }}</a>
                 </li>
                 {% endfor %}
               </ul>
@@ -80,6 +80,6 @@
       <hr />
       <p>&copy; <time>2016</time> {{ site.author }}</p>
     </footer>
-    <script src="{{site.baseurl}}/scripts.js"></script>
+    <!--script src="{{site.baseurl}}/scripts.js"></script-->
   </body>
 </html>
