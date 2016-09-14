@@ -40,7 +40,7 @@
               <ul class="dropdown-menu">
                 {% for tutorial in site.collections %}
                 <li>
-                  <a href="{{ tutorial.directory }}">{{ tutorial.label }}</a>
+                  <a href="{{ tutorial.path | remove "_" }}">{{ tutorial.label }}</a>
                 </li>
                 {% endfor %}
               </ul>
