@@ -4,5 +4,6 @@ author: J. Metz
 #  enabled : true
 #  #highlighter: pygments
 collections:
-  - intropython2016
+  intropython2016:
+    output : true
   - advancedpython2016
