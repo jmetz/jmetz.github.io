@@ -1,5 +1,5 @@
 ---
-title: JMetz's personal site
+title: J. Metz's personal site
 layout: default
 ---
 
