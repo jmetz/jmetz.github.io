@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+
+
+
+<html>
+  <head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- ### -->
+    <title>Getting Started | Introduction to Python 2016</title>
+    <meta name="description" content=""/>
+    <meta name="author" content="J. Metz"/>
+    <link href="/css/syntax.css" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha256-7s5uDGW3AHqw6xtJmNNtr+OBRJUlgkNJEo78P4b0yRw= sha512-nNo+yCHEyn0smMxSswnf/OnX6/KwJuZTlNZBjauKhTK0c+zT+q5JOCx0UFhXQ6rJR9jg6Es8gPuD2uZcYDLqSw==" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha256-KXn5puMvxCw+dAYznun+drMdG1IFl3agK0p/pqT9KAo= sha512-2e8qq0ETcfWRI4HJBzQiA3UoyFk6tbNyG+qSaIBZLyW9Xf3sWZHN/lxe9fTh1U45DpPf07yj94KsUHHWe4Yk1A==" crossorigin="anonymous"></script>
+  </head>
+
+  <body>
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="/">J. Metz</a>
+        </div>
+    
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav">
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                  Introduction to Python 2016<span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                
+                <li>
+                  <a href="/intropython2016/00_introduction.html">Introduction</a>
+                </li>
+                
+                <li>
+                  <a href="/intropython2016/01_getting_started.html">Getting Started</a>
+                </li>
+                
+                <li>
+                  <a href="/intropython2016/02_first_script.html">Writing your first Script</a>
+                </li>
+                
+              </ul>
+            </li>
+            <li class="active"><a href="#">Getting Started <span class="sr-only">(current)</span></a></li>
+          </ul>
+          <!--form class="navbar-form navbar-left" role="search">
+            <div class="form-group">
+              <input type="text" class="form-control" placeholder="Search">
+            </div>
+            <button type="submit" class="btn btn-default">Submit</button>
+          </form-->
+          <!--ul class="nav navbar-nav navbar-right">
+            <li><a href="#">Link</a></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="#">Action</a></li>
+                <li><a href="#">Another action</a></li>
+                <li><a href="#">Something else here</a></li>
+                <li role="separator" class="divider"></li>
+                <li><a href="#">Separated link</a></li>
+              </ul>
+            </li>
+          </ul-->
+        </div><!-- /.navbar-collapse -->
+      </div><!-- /.container-fluid -->
+    </nav>
+
+
+    <main>
+      <div class="container">
+        <h1 id="getting-started">Getting started</h1>
+
+<p>Before we dive into Python, let’s get familiar with the environment 
+we are going to use to program and run Python. 
+The two main components you will need to use Python are</p>
+
+<ul>
+  <li>A terminal/console</li>
+  <li>A text editor</li>
+</ul>
+
+<h2 id="an-editor">An editor</h2>
+
+<p>As Python code is human readable text, we need a text editor of some sort 
+to read end edit Python code.</p>
+
+<blockquote>
+  <p><strong>Jargon</strong></p>
+
+  <p>If the text editor has features like syntax highlighting (colour coding 
+words in the code based on what they are), 
+code completion, and other goodies, it’s called a <strong>code editor</strong>. 
+If it is embedded in an interface that also has a terminal and sometimes a variable browser, 
+the whole program is referred to as an Integrated Development Environment (IDE).</p>
+</blockquote>
+
+<p>For this workshop we will be using <strong>Notepad++</strong> as this is similar to Notepad
+but adds things like syntax highlighting.</p>
+
+<p>In the Start Menu, find <strong>Notepad++</strong>, either by looking through the programs
+or by using the search field.</p>
+
+<h2 id="the-terminal">The terminal</h2>
+
+<p>In order to run Python scripts we will use a pre-configured 
+command prompt provided by WinPython.</p>
+
+<p>In the Start Menu, find <strong>WinPython Command Prompt</strong>, either by 
+looking through the programs or by using the search field.</p>
+
+<p>To run a script from the terminal use</p>
+
+<div class="language-shell highlighter-rouge"><pre class="highlight"><code>python scriptname.py
+</code></pre>
+</div>
+
+<h1 id="getting-help">Getting help</h1>
+
+<p>As well as asking the demonstrators, you are encouraged to 
+get used to using online resources. Simply searching for e.g.</p>
+
+<p>python FUNCTIONNAME</p>
+
+<python-search></python-search>
+
+<p>(and replacing FUNCTIONNAME with the name of the function you want help on!)
+using your favourite search engine will almost always return relevant 
+help.</p>
+
+<p>While the demonstrators are there to help you get started and provide detailed 
+help when you need it, 
+it will be very beneficial to you in the long run to become familiar with 
+what online sources there are and how to optimize your searches to most 
+quickly find the answers you need.</p>
+
+<p>Resources I often use are:</p>
+
+<ul>
+  <li>Official Python documentation (very extensive!) : https://docs.python.org/3/</li>
+  <li>Stack overflow (Programmer Q&amp;A; Python tag) : http://stackoverflow.com/questions/tagged/python</li>
+  <li>Various blogs e.g.
+    <ul>
+      <li>Planet Python     : http://planetpython.org/</li>
+      <li>Doug Hellmann     : https://doughellmann.com/blog/</li>
+      <li>Effbot            : http://effbot.org/</li>
+      <li>Mouse vs Python   : http://www.blog.pythonlibrary.org/</li>
+    </ul>
+  </li>
+</ul>
+
+<blockquote>
+  <p><strong>Advanced Users</strong></p>
+
+  <p>Another simple way of getting help is to use the interactive help 
+system in the IPython console. 
+The IPython console is an interactive Python session, i.e. it looks 
+like a terminal but instead of accepting terminal commands, it 
+accepts Python code directly. 
+The IPython console has several useful features to get help including</p>
+
+  <ul>
+    <li><code class="highlighter-rouge">help(FUNCTIONNAME)</code> prints help on the function called <code class="highlighter-rouge">FUNCTIONNAME</code></li>
+    <li><code class="highlighter-rouge">FUNCTIONNAME?</code> prints help on the function called <code class="highlighter-rouge">FUNCTIONNAME</code></li>
+    <li><code class="highlighter-rouge">MODULENAME.</code> and then pressing tab (twice) shows a list of all functions available in the module called MODULENAME (if it’s imported).</li>
+  </ul>
+</blockquote>
+
+
+      <!-- NEXT AND PREVIOUS -->
+       
+          <span class="btn btn-default previous-link">
+            <a rel="prev" href="/intropython2016/00_introduction.html">Previous Page</a>
+          </span>
+        
+         
+          <span class="btn btn-default next-link">
+            <a rel="next" href="/intropython2016/02_first_script.html">Next Page</a>
+          </span>
+        
+      </div>
+    </main>
+
+    <footer>
+      <hr />
+      <p>&copy; <time>2016</time> J. Metz</p>
+    </footer>
+    <!--script src="/scripts.js"></script-->
+  </body>
+</html>

@@ -1,9 +1,19 @@
 ---
 collection: intropython2016
-title: intropython2016 introduction
-layout: default
+title: Introduction
+layout: tutorial 
 ---
 [![XKCD comic](images/python.png)](http://xkcd.com/353/)
+
+Welcome!
+
+This tutorial contains the following pages: 
+{% for page in site.intropython2016 %}
+<li>
+    <a href="{{ page.url }}">{{ page.title }}</a>
+    <p>{{ page.short-description }}</p>
+</li>
+{% endfor %}
 
 ## Introduction
 
@@ -110,10 +120,46 @@ generate a statistical plot for each one, including titles etc!**
 
 ("Time-series" generated using `numpy`s random number generator).  
 
-<tutorial-page-exercise 
-    dlgid="initial-sample-01" url="content/python2016_intro/initial_code_sample.md" 
-    buttontext="See code">
-</tutorial-page-exercise>
+
+{% include exercise_start.html title="Sample Code" id="sampleCode" %}
+
+**Note: lines starting with a hash (#) are just comments - 
+text useful for other developer and is not executed**
+
+In code: 
+
+```py
+# Modules we're going to use
+import os, numpy, pylab
+# Matplotlib's default style is a bit ugly, use the R's
+# ggplot2-inspired style!
+pylab.style.use('ggplot')
+
+# "Walk" through the entire directory tree
+for root, dirs, filenames in os.walk("/datapath"):
+    # Work on csv (comma separated value) files 
+    for filename in filter(lambda f: endswith(".csv", filenames)):
+        # Load 2d time-series data into an array using Numpy
+        # (time is along 2nd dimension)
+        data = numpy.loadtxt(filename, delimiter=",")
+        # Get some stats
+        means   = data.mean(axis=-1)
+        stdevs  = data.std(axis=-1)
+        stderrs = stdevs / numpy.sqrt(data.shape[-1])
+
+        # Make bar plots with errorbars
+        pylab.bar(range(data.shape[0]), means, yerr=stderrs)
+        
+        # Add in labels and title
+        pylab.xlabel("Timeseries index")
+        pylab.ylabel("Mean (over time)")
+        pylab.title("Time-series means with standard deviations")
+
+        # Save the plot as a PDF
+        # in the data folder with a datafile specific filename
+        pylab.savefig(os.path.join(root, filename + "_result.pdf"))
+```
+{% include exercise_end.html %}
 
 
 In addition, this was using general numerical libraries; with a specialist 

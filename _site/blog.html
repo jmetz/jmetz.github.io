@@ -6,9 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- ### -->
-    <title>{% if page.title %} {{ page.title }} | {% endif %} {{ site.name }}</title>
-    <meta name="description" content="{{site.description}}"/>
-    <meta name="author" content="{{site.author}}"/>
+    <title> All Blog Posts |  J. Metz's homepage</title>
+    <meta name="description" content=""/>
+    <meta name="author" content="J. Metz"/>
     <link href="/css/syntax.css" rel="stylesheet">
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha256-7s5uDGW3AHqw6xtJmNNtr+OBRJUlgkNJEo78P4b0yRw= sha512-nNo+yCHEyn0smMxSswnf/OnX6/KwJuZTlNZBjauKhTK0c+zT+q5JOCx0UFhXQ6rJR9jg6Es8gPuD2uZcYDLqSw==" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
@@ -32,18 +32,28 @@
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-nav">
-            <li class="active"><a href="#">{{page.title}} <span class="sr-only">(current)</span></a></li>
+            <li class="active"><a href="#">All Blog Posts <span class="sr-only">(current)</span></a></li>
             <!--li><a href="/blog.html">Blog</a></li-->
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
                   Tutorials <span class="caret"></span></a>
               <ul class="dropdown-menu">
-                {% for tutorial in site.collections %}
+                
                 <li>
-                  {% assign firstpage = tutorial.docs.first %}
-                  <a href="{{ firstpage.url }}">{{ tutorial.title }}</a>
+                  
+                  <a href="">Advanced Python 2016</a>
                 </li>
-                {% endfor %}
+                
+                <li>
+                  
+                  <a href="/intropython2016/00_introduction.html">Introduction to Python 2016</a>
+                </li>
+                
+                <li>
+                  
+                  <a href=""></a>
+                </li>
+                
               </ul>
             </li>
           </ul>
@@ -73,14 +83,16 @@
 
     <main>
       <div class="container">
-        {{ content }}
+        <h1 id="all-posts">All posts</h1>
+
+
       </div>
     </main>
 
     <footer>
       <hr />
-      <p>&copy; <time>2016</time> {{ site.author }}</p>
+      <p>&copy; <time>2016</time> J. Metz</p>
     </footer>
-    <!--script src="{{site.baseurl}}/scripts.js"></script-->
+    <!--script src="/scripts.js"></script-->
   </body>
 </html>

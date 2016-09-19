@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+
+
+
+<html>
+  <head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- ### -->
+    <title>Writing your first Script | Introduction to Python 2016</title>
+    <meta name="description" content=""/>
+    <meta name="author" content="J. Metz"/>
+    <link href="/css/syntax.css" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha256-7s5uDGW3AHqw6xtJmNNtr+OBRJUlgkNJEo78P4b0yRw= sha512-nNo+yCHEyn0smMxSswnf/OnX6/KwJuZTlNZBjauKhTK0c+zT+q5JOCx0UFhXQ6rJR9jg6Es8gPuD2uZcYDLqSw==" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha256-KXn5puMvxCw+dAYznun+drMdG1IFl3agK0p/pqT9KAo= sha512-2e8qq0ETcfWRI4HJBzQiA3UoyFk6tbNyG+qSaIBZLyW9Xf3sWZHN/lxe9fTh1U45DpPf07yj94KsUHHWe4Yk1A==" crossorigin="anonymous"></script>
+  </head>
+
+  <body>
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="/">J. Metz</a>
+        </div>
+    
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav">
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                  Introduction to Python 2016<span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                
+                <li>
+                  <a href="/intropython2016/00_introduction.html">Introduction</a>
+                </li>
+                
+                <li>
+                  <a href="/intropython2016/01_getting_started.html">Getting Started</a>
+                </li>
+                
+                <li>
+                  <a href="/intropython2016/02_first_script.html">Writing your first Script</a>
+                </li>
+                
+              </ul>
+            </li>
+            <li class="active"><a href="#">Writing your first Script <span class="sr-only">(current)</span></a></li>
+          </ul>
+          <!--form class="navbar-form navbar-left" role="search">
+            <div class="form-group">
+              <input type="text" class="form-control" placeholder="Search">
+            </div>
+            <button type="submit" class="btn btn-default">Submit</button>
+          </form-->
+          <!--ul class="nav navbar-nav navbar-right">
+            <li><a href="#">Link</a></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="#">Action</a></li>
+                <li><a href="#">Another action</a></li>
+                <li><a href="#">Something else here</a></li>
+                <li role="separator" class="divider"></li>
+                <li><a href="#">Separated link</a></li>
+              </ul>
+            </li>
+          </ul-->
+        </div><!-- /.navbar-collapse -->
+      </div><!-- /.container-fluid -->
+    </nav>
+
+
+    <main>
+      <div class="container">
+        <h1 id="writing-your-first-script">Writing your first Script</h1>
+
+<h2 id="organization-of-scripts">Organization of scripts</h2>
+
+<p>Before we write anything, let’s create a folder to hold your Python scripts.</p>
+
+<p>Usually you would choose a hierarchy that’s sensible for you 
+(for example I use <code class="highlighter-rouge">Documents/programming/python</code> in my home directory 
+as the root for all of my Python projects!).</p>
+
+<p>For the purposes of this workshop, let’s use your Desktop folder
+<strong>in your U drive</strong> and create a folder called</p>
+<div class="highlighter-rouge"><pre class="highlight"><code>python_workshop 
+</code></pre>
+</div>
+
+<h2 id="what-is-a-python-script">What is a Python Script?</h2>
+
+<p>A Python script is just a plain text file, and the 
+convention is to use the extension <code class="highlighter-rouge">.py</code> (instead of e.g. <code class="highlighter-rouge">.txt</code>) 
+to let programs know that it holds Python code.</p>
+
+<blockquote>
+  <p>Python code is very close to something called pseudo-code, which 
+is what people use when detailing the main components of an algorithm.</p>
+
+  <p>For example, the pseudo-code for the factorial function 
+(e.g. 3! = 3 x 2 x 1):</p>
+
+  <div class="highlighter-rouge"><pre class="highlight"><code>SET fact to n
+WHILE n is more than 1
+    SET fact to fact times (n - 1)
+    SET n to n - 1
+</code></pre>
+  </div>
+
+  <p>while the python code is</p>
+
+  <div class="language-py highlighter-rouge"><pre class="highlight"><code><span class="n">fact</span> <span class="o">=</span> <span class="n">n</span>
+<span class="k">while</span> <span class="n">n</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">:</span>
+    <span class="n">fact</span> <span class="o">=</span> <span class="n">fact</span> <span class="o">*</span> <span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+    <span class="n">n</span>    <span class="o">=</span> <span class="n">n</span> <span class="o">-</span> <span class="mi">1</span>
+</code></pre>
+  </div>
+
+  <p>What this simple example illustrates, is that Python is extremely 
+readable; it just takes becoming familiar with a few base syntax rules (~grammar).</p>
+
+  <p>We’ll be speaking Python in no time!</p>
+</blockquote>
+
+<h2 id="worked-exercise--hello-world">Worked Exercise : Hello, world!</h2>
+
+<p>We’ll start by creating a blank Python script file.</p>
+
+<h3 id="creating-a-file">Creating a file</h3>
+
+<p>We’re going to name our first script file 
+<code class="highlighter-rouge">exercise_hello_world.py</code> and keep it inside the newly created <code class="highlighter-rouge">python_workshop</code> 
+folder.</p>
+
+<p>To do this, open <code class="highlighter-rouge">Notepad++</code>. You should see a blank file (that may be named “new 1”, or “new 2” etc, depending on if you closed any tabs!).</p>
+
+<p><img src="images/starting_notepad.png" alt="Starting Notepad++" /></p>
+
+<p>If you don’t see a blank file, select <code class="highlighter-rouge">File-&gt;New</code> in from the menu bar.</p>
+
+<p>Then select <code class="highlighter-rouge">File-&gt;Save As</code>, navigate to the <code class="highlighter-rouge">python_workshop</code> 
+folder we created a few minutes ago, 
+and set the file name to <code class="highlighter-rouge">exercise_hello_world.py</code> and click <strong>Save</strong>.</p>
+
+<p>Now that we have a blank Python script file, lets start adding 
+some code!</p>
+
+<h3 id="initial-content">Initial content</h3>
+
+<p>First of all, enter:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code># Author: Your Name &lt;your@email.address&gt;
+# This is a script to test that Python is working
+</code></pre>
+</div>
+
+<p>replacing the text in the line starting <code class="highlighter-rouge"># Author</code> with your details.</p>
+
+<h3 id="running-the-script-with-python-the-terminal">Running the script with Python: The Terminal</h3>
+
+<p>Now let’s see what running this through Python does!</p>
+
+<p>Start a customized command prompt (<strong>reminder</strong>: in the Windows
+File Explorer, find the WinPython3 folder on the C: drive, 
+and click on  <strong>WinPython Command Prompt.exe</strong>).</p>
+
+<p>A terminal window should pop up, that looks a little bit like</p>
+
+<p><img src="images/starting_terminal.gif" alt="Terminal Window" /></p>
+
+<blockquote>
+  <p><strong>Reminder: Basic terminal usage</strong></p>
+
+  <p>You were advised to have basic knowledge of using a terminal 
+(Windows Command Prompt/Linux Terminal/MacOS Terminal), 
+you’re about to see why!</p>
+
+  <p>Here’s a recap of the things you’re most likely to need.</p>
+
+  <table>
+  <tr>
+      <th>Windows</th>
+      <th>MacOS / Linux</th>
+      <th>What it does</th>
+  </tr>
+  <tr>
+      <td>`cd FOLDER_NAME`</td>
+      <td>`cd FOLDER_NAME`</td>
+      <td>Change directory to FOLDER_NAME </td>
+  </tr>
+  <tr>
+      <td>`dir [FOLDER_NAME]`</td>
+      <td>`ls [FOLDER_NAME]`</td>
+      <td>List folder contents; if FOLDER_NAME<br />is omitted, list current folder contents</td>
+  </tr>
+  <tr>
+      <td>`..`</td>
+      <td>`..`</td>
+      <td>Reference to parent folder. E.g. `cd ..`<br />is how you would navigate from `/a/b/c/` to<br />`/a/b/` if you are currently in `/a/b/c/`.</td>
+  </tr>
+  <tr>
+      <td>`mkdir FOLDER_NAME`</td>
+      <td>`mkdir FOLDER_NAME`</td>
+      <td>Create a folder called FOLDER_NAME</td>
+  </tr>
+</table>
+</blockquote>
+
+<blockquote>
+  <p><strong>Quick note on terminology</strong></p>
+
+  <p><strong>Folder</strong> and <strong>directory</strong> refer to the same thing, while 
+<strong>full path</strong> or <strong>absolute path</strong> means the full directory 
+location. E.g. if you’re currently in your Desktop folder, the folder is 
+Desktop, but the full path is something like <code class="highlighter-rouge">/users/joe/Desktop</code>. 
+If you’re on Windows the path starts with a drive letter too, like 
+“C:” or “U:”, and the forward-slashes will be backslashes instead.</p>
+
+  <p><strong>Console</strong> and <strong>terminal</strong> (and sometimes <strong>shell</strong>) are usually 
+used interchangeably to mean 
+the same thing; the text-based interface where commands can be entered. 
+In windows, the built-in console is also called the “command prompt” 
+and is started using <code class="highlighter-rouge">cmd.exe</code>.</p>
+
+  <p>For our purposes, we’re going to be mainly interested in the terminal console 
+which is where we type commands like <code class="highlighter-rouge">cd</code>, or <code class="highlighter-rouge">dir</code>.</p>
+
+  <p>For interactive Python snippet testing we can also use the 
+Interactive Python console, which is where we can directly type 
+python commands. You might encounter this later; for now just be 
+aware that there are these two types of console.</p>
+</blockquote>
+
+<p>Now using the terminal command to change directory, <code class="highlighter-rouge">cd</code>, navigate to 
+your Desktop directory.</p>
+
+<p><img src="images/navigate_desktop.gif" alt="Navigate to Desktop" /></p>
+
+<p>You can verify that it contains your new <code class="highlighter-rouge">python_workshop</code> folder by 
+using the <strong>windows</strong> terminal command <code class="highlighter-rouge">dir</code>:</p>
+
+<div class="language-shell highlighter-rouge"><pre class="highlight"><code>dir
+</code></pre>
+</div>
+<p>should list</p>
+<div class="highlighter-rouge"><pre class="highlight"><code>python_workshop
+</code></pre>
+</div>
+<p>in the output.</p>
+
+<p>Change directory into the <code class="highlighter-rouge">python_workshop</code> folder using</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>cd python_workshop
+</code></pre>
+</div>
+<p>and verify that our new file is there using <code class="highlighter-rouge">dir</code>.</p>
+
+<p>If you see your file (<strong>exercise_hello_world.py</strong>) listed, great! If not, 
+check the previous steps carefully and/or ask a demonstrator for help.</p>
+
+<p>Once the terminal is in the correct directory, we’re ready to run Python on 
+our file.</p>
+
+<p>As the terminal is preconfigured (meaning that it knows all about the Python program and where to find it) we can simply type <code class="highlighter-rouge">python ...</code> to run the Python interpreter, replacing “…” with input arguments.</p>
+
+<p>In most simple use cases, we just use a single input argument; the script file name.</p>
+
+<blockquote>
+  <p>In advanced usage cases, we can also add in additional <strong>command line 
+arguments</strong> to the script, but this will be covered in an advanced exercise 
+in the follow-on workshop.</p>
+</blockquote>
+
+<p>We can now type</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>python exercise_hello_world.py
+</code></pre>
+</div>
+
+<p>to get Python to run our script file:</p>
+
+<p><img src="images/run_comment.gif" alt="Show Desktop contents" /></p>
+
+<p>We should get no output - python has interpreted and run our script file, 
+but as the script only contained <strong>comments</strong>, no terminal output was 
+produced!</p>
+
+<blockquote>
+  <p><strong>Comments</strong></p>
+
+  <p>Comments are used to make notes about things like 
+what each few lines of code are doing. 
+In our case, we also added an initial comment that 
+keeps track of who wrote the script. 
+Comments are created by using the hash symbol, <strong>#</strong>.</p>
+
+  <p>A comment can take up a whole line as in our script above, 
+or only part of a line; we’ll see an example of this later.</p>
+</blockquote>
+
+<h3 id="adding-functionality">Adding functionality</h3>
+
+<p>Now that we have a script file that contains a couple of lines of 
+comment, and successfully runs with Python (i.e. does nothing!), let’s 
+add some functionality.</p>
+
+<p>Switch back to the editor window (Notepad++) and add an empty line 
+(for readability). 
+Then, on the fourth line of the script add the text</p>
+
+<div class="language-py highlighter-rouge"><pre class="highlight"><code><span class="k">print</span><span class="p">(</span><span class="s">"Hello world from YOURNAME"</span><span class="p">)</span>
+</code></pre>
+</div>
+
+<p>replacing the placeholder YOURNAME with your actual name.</p>
+
+<tutorial-page-exercise dlgid="answer-hello-world" url="content/python2016_intro/exercises/answer_hello_world.md" buttontext="Full code listing" buttoncolor="green">
+</tutorial-page-exercise>
+
+<p>Switch to the terminal window, and repeat the python command</p>
+
+<blockquote>
+  <p><strong>Tip</strong></p>
+
+  <p>On many terminals, you can press the Up arrow key to cycle through 
+previous commands. This will save you from having to type 
+the command each time!</p>
+</blockquote>
+
+<blockquote>
+  <p><strong>Tip</strong></p>
+
+  <p>On several desktop environments (including Windows), you can 
+cycle between open windows using “Alt + Tab” (or “Alt + Shift + Tab) 
+to cycle in the other direction); this saves you from having to 
+use the mouse between editing and running code.</p>
+</blockquote>
+
+<p><img src="images/run_print.gif" alt="Hello, world!" /></p>
+
+<p>Hurrah! We got Python to output text to the terminal. 
+This may not seem like much of an achievement, but once you understand 
+this line of code, you’re well on your way to being able to program 
+in Python.</p>
+
+<p>So let’s have a look.</p>
+
+<h3 id="anatomy-of-our-script">Anatomy of our script</h3>
+
+<h4 id="lines-1--2">Lines 1 &amp; 2</h4>
+
+<p>As mentioned above, lines 1 and 2 are comments, which are non-executing 
+lines of text that are used for us to be able to understand our code. 
+They may seem pointless now, but if you give your script to a colleague 
+who’s never touched a program before, if they read the first couple of 
+lines they will immediately know who wrote the script, and why.</p>
+
+<p>Comments become much more useful as scripts grow; future you 
+may well benefit from well commented code as you look back over a script 
+and try to remember what you were doing and why!</p>
+
+<h4 id="line-4">Line 4</h4>
+
+<p>Our first line of Python code contains two of the 
+major concepts of this course; a <strong>function call</strong>, and <strong>data type</strong>.</p>
+
+<h3 id="calling-a-function">Calling a function</h3>
+
+<p>The function being called, or executed, is named <code class="highlighter-rouge">print</code>, and 
+the data it is given as an <em>argument</em> is <code class="highlighter-rouge">"Hello, world from Joe"</code>.
+This data is of <em>type</em> <strong>string</strong> (more on ths in the next setion!).</p>
+
+<blockquote>
+  <h4 id="what-is-a-function">What is a Function?</h4>
+
+  <p>A function is a self-contained piece of processing; often functions take inputs and 
+provide return values (but they don’t have to).</p>
+
+  <p>They provide a way to separate specific pieces of processing so that they can be 
+reused over and over again.</p>
+
+  <p>If you’re familiar with the concept of a function from mathematics, 
+programming functions can be similar: for example the <strong>sin</strong> 
+trigonometric function generates an <em>output</em> 
+number (between -1 and 1) for any <em>input</em> angle.</p>
+
+  <p>The <code class="highlighter-rouge">print</code> function does not generate any output values - it only causes it’s 
+input to be “printed” to the terminal. For functions that <em>do</em> generate output 
+values, these outputs are often captured by <em>assigning</em> them to <em>variables</em> - more on this later!</p>
+</blockquote>
+
+<p>The syntax for calling a function is:</p>
+<ul>
+  <li>the function name, in this case <code class="highlighter-rouge">print</code>,</li>
+  <li>followed by open parentheses, <strong>(</strong></li>
+  <li>the argument list, in this case the string <code class="highlighter-rouge">"Hello, world from Joe"</code>,</li>
+  <li>and then close parentheses, <strong>)</strong></li>
+</ul>
+
+<h3 id="outputting-to-the-terminal-using-print">Outputting to the terminal using <code class="highlighter-rouge">print</code></h3>
+
+<p>The <code class="highlighter-rouge">print</code> function is useful for providing output to the terminal - which is 
+the most basic way of getting information out of a Python script.</p>
+
+<p>The print function accepts a variety of input data types. For example we can 
+write</p>
+<div class="language-py highlighter-rouge"><pre class="highlight"><code><span class="k">print</span><span class="p">(</span><span class="s">"Any string"</span><span class="p">)</span> 
+</code></pre>
+</div>
+<p>as well as</p>
+<div class="language-py highlighter-rouge"><pre class="highlight"><code><span class="k">print</span><span class="p">(</span><span class="mf">3.147</span><span class="p">)</span>
+</code></pre>
+</div>
+<p>i.e. a number.</p>
+
+<p>You may also pass multiple, comma-separated arguments to the <code class="highlighter-rouge">print</code> function. 
+E.g.</p>
+
+<div class="language-py highlighter-rouge"><pre class="highlight"><code><span class="k">print</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="s">"is bigger than"</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+</code></pre>
+</div>
+<p>outputs:</p>
+<div class="highlighter-rouge"><pre class="highlight"><code>10 is bigger than 2
+</code></pre>
+</div>
+
+<p>Now that we know how to write a script, and how to run it with Python, let’s 
+examine in more detail what goes into the script, starting with data types.</p>
+
+<h3 id="vital-note-on-whitespace-in-python-scripts">VITAL note on whitespace in Python scripts</h3>
+
+<p>The creator of Python decided that code-readability is crucial for good programming, 
+and that unlike almost all other languages where badly laid out code is still valid, 
+in Python code <strong>must</strong> be laid out in a specific way.</p>
+
+<p>By layout, we’re refering to the whitespace (spaces or tabs) preceding text in code, 
+known as the <strong>indentation</strong>:</p>
+
+<div class="important-section">
+**Every "logical block" of code in Python must be at the same indentation level**. 
+</div>
+
+<p>For example</p>
+
+<div class="language-py highlighter-rouge"><pre class="highlight"><code><span class="k">print</span><span class="p">(</span><span class="s">"Hello"</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s">"World"</span><span class="p">)</span>
+</code></pre>
+</div>
+
+<p>is perfectly fine, while</p>
+
+<div class="language-py highlighter-rouge"><pre class="highlight"><code><span class="k">print</span><span class="p">(</span><span class="s">"Hello"</span><span class="p">)</span>
+  <span class="k">print</span><span class="p">(</span><span class="s">"World"</span><span class="p">)</span>
+</code></pre>
+</div>
+
+<p>would cause an indentation error.</p>
+
+<p>While this feature of Python may seem petty or just irritating at first, many 
+Python users grow to appreciate its significance in enforcing good coding practice.</p>
+
+
+      <!-- NEXT AND PREVIOUS -->
+       
+          <span class="btn btn-default previous-link">
+            <a rel="prev" href="/intropython2016/01_getting_started.html">Previous Page</a>
+          </span>
+        
+        
+      </div>
+    </main>
+
+    <footer>
+      <hr />
+      <p>&copy; <time>2016</time> J. Metz</p>
+    </footer>
+    <!--script src="/scripts.js"></script-->
+  </body>
+</html>

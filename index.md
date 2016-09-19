@@ -1,9 +1,9 @@
 ---
-title: J. Metz's personal site
+title: J. Metz's site
 layout: default
 ---
 
-Welcome to my personal website. 
+Welcome to my website. 
 
 This site is currently under construction. 
 

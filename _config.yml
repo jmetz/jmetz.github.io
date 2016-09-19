@@ -5,6 +5,8 @@ author: J. Metz
 #  #highlighter: pygments
 collections:
   intropython2016:
+    title : Introduction to Python 2016
     output : true
   advancedpython2016:
+    title : Advanced Python 2016
     output : true

@@ -1,11 +1,12 @@
 ---
 collection: intropython2016
-layout: default
-title: intropython2016 index
+layout: tutorial
+title: Index
 ---
 Welcome!
 
-{% for page in site.intropython2016 limit:3 %}
+This tutorial contains the following pages: 
+{% for page in site.intropython2016 | shift %}
 <li>
     <a href="{{ page.url }}">{{ page.title }}</a>
     <p>{{ page.short-description }}</p>

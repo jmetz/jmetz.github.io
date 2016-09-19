@@ -1,0 +1,78 @@
+<!--
+@license
+Copyright (c) 2015 The Polymer Project Authors. All rights reserved.
+This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
+The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
+The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
+Code distributed by Google as part of the polymer project is also
+subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
+-->
+
+<script src="/biomedicalhub/bower_components/page/page.js"></script>
+<script>
+  window.addEventListener('WebComponentsReady', function() {
+
+    // We use Page.js for routing. This is a Micro
+    // client-side router inspired by the Express router
+    // More info: https://visionmedia.github.io/page.js/
+
+    // Middleware
+    function scrollToTop(ctx, next) {
+      app.scrollPageToTop();
+      next();
+    }
+
+    // Routes
+    page('/biomedicalhub/', scrollToTop, function() {
+      app.route = 'home';
+      console.log('Route is home');
+    });
+
+    page('/biomedicalhub/pages', scrollToTop, function(data) {
+      app.route = 'pages';
+      console.log('Route is /biomedicalhub/pages');
+      console.log(data);
+    });
+
+    page('/biomedicalhub/pages/:id', scrollToTop, function(data) {
+      app.route = 'full-view';
+      console.log('Route is /biomedicalhub/pages/ID');
+      app.params = data.params;
+      var id = data.params.id;
+      app.currentpages = app.tutorials[id].pages;
+    });
+    
+    page('/biomedicalhub/pages/:id/:subid', scrollToTop, function(data) {
+      var id = data.params.id;
+      var subid = data.params.subid;
+      app.route = 'page-view';
+      console.log('Route is page-view for id and subid : ' + id + ', ' + subid);
+      app.params = data.params;
+      var tutorial = app.tutorials[id];
+      var suburl = tutorial.pages[subid].url;
+      app.pageurl = suburl;
+      nextid = String(parseInt(subid)+1);
+      previd = String(parseInt(subid)-1);
+      if(nextid in tutorial.pages){
+        app.nexturl = "/biomedicalhub/pages/"+id+"/"+nextid;
+      }else{
+        app.nexturl = "";
+      }
+      if(previd in tutorial.pages){
+        app.prevurl = "/biomedicalhub/pages/"+id+"/"+previd;
+      }else{
+        app.prevurl = "";
+      }
+    });
+
+    page('/biomedicalhub/contact', scrollToTop, function() {
+      app.route = 'contact';
+    });
+
+    // add #! before urls
+    page({
+      hashbang: true
+    });
+
+  });
+</script>

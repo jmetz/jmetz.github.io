@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+
+
+
+<html>
+  <head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- ### -->
+    <title>Introduction | Introduction to Python 2016</title>
+    <meta name="description" content=""/>
+    <meta name="author" content="J. Metz"/>
+    <link href="/css/syntax.css" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha256-7s5uDGW3AHqw6xtJmNNtr+OBRJUlgkNJEo78P4b0yRw= sha512-nNo+yCHEyn0smMxSswnf/OnX6/KwJuZTlNZBjauKhTK0c+zT+q5JOCx0UFhXQ6rJR9jg6Es8gPuD2uZcYDLqSw==" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha256-KXn5puMvxCw+dAYznun+drMdG1IFl3agK0p/pqT9KAo= sha512-2e8qq0ETcfWRI4HJBzQiA3UoyFk6tbNyG+qSaIBZLyW9Xf3sWZHN/lxe9fTh1U45DpPf07yj94KsUHHWe4Yk1A==" crossorigin="anonymous"></script>
+  </head>
+
+  <body>
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="/">J. Metz</a>
+        </div>
+    
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav">
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                  Introduction to Python 2016<span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                
+                <li>
+                  <a href="/intropython2016/00_introduction.html">Introduction</a>
+                </li>
+                
+                <li>
+                  <a href="/intropython2016/01_getting_started.html">Getting Started</a>
+                </li>
+                
+                <li>
+                  <a href="/intropython2016/02_first_script.html">Writing your first Script</a>
+                </li>
+                
+              </ul>
+            </li>
+            <li class="active"><a href="#">Introduction <span class="sr-only">(current)</span></a></li>
+          </ul>
+          <!--form class="navbar-form navbar-left" role="search">
+            <div class="form-group">
+              <input type="text" class="form-control" placeholder="Search">
+            </div>
+            <button type="submit" class="btn btn-default">Submit</button>
+          </form-->
+          <!--ul class="nav navbar-nav navbar-right">
+            <li><a href="#">Link</a></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="#">Action</a></li>
+                <li><a href="#">Another action</a></li>
+                <li><a href="#">Something else here</a></li>
+                <li role="separator" class="divider"></li>
+                <li><a href="#">Separated link</a></li>
+              </ul>
+            </li>
+          </ul-->
+        </div><!-- /.navbar-collapse -->
+      </div><!-- /.container-fluid -->
+    </nav>
+
+
+    <main>
+      <div class="container">
+        <p><a href="http://xkcd.com/353/"><img src="images/python.png" alt="XKCD comic" /></a></p>
+
+<p>Welcome!</p>
+
+<p>This tutorial contains the following pages:</p>
+
+<li>
+    <a href="/intropython2016/00_introduction.html">Introduction</a>
+    <p></p>
+</li>
+
+<li>
+    <a href="/intropython2016/01_getting_started.html">Getting Started</a>
+    <p></p>
+</li>
+
+<li>
+    <a href="/intropython2016/02_first_script.html">Writing your first Script</a>
+    <p></p>
+</li>
+
+<h2 id="introduction">Introduction</h2>
+
+<p>These notes are intended as a light introduction and guide
+to learning how to program in Python.</p>
+
+<p>As big a part of this workshop as any of the formal aims listed below, 
+is that you should enjoy yourself. Python is a fun language because it is
+relatively easy to read and tells you all about what you did wrong (or what 
+module was broken) if an error occurs.</p>
+
+<p>With that in mind, have fun, and happy learning!</p>
+
+<h2 id="structure-of-this-course">Structure of this course</h2>
+
+<p>The main components of this workshop are these notes and accompanying 
+exercises.</p>
+
+<p>In addition you will receive a brief introductory talk, and we 
+will work through the first exercise together to make sure that you are 
+able to write and run a basic Python script.</p>
+
+<p>From there, you’ll be left to work through the material at your own pace
+with invaluable guidance and advice available from the workshop demonstrators.</p>
+
+<p>Where appropriate, key points will be emphasized via short interjections 
+during the workshop.</p>
+
+<h2 id="what-is-python">What is Python?</h2>
+
+<p>Python is the name of a programming language (created by Dutch 
+programmer <a href="https://en.wikipedia.org/wiki/Guido_van_Rossum">Guido Van Rossum</a>
+as a hobby programming project!), as well as the program, known as 
+an interpreter, that executes scripts (text files) written in that language.</p>
+
+<p>Van Rossum named his new programming language after Monty Python’s Flying Circus 
+(he was reading the published scripts from “Monty Pythonâ€™s Flying Circus” at the 
+time of developing Python!).</p>
+
+<p>It is common to use Monty Python references in example code. 
+For example, the dummy (aka metasyntactic) variables often used in Python 
+literature are spam and eggs, instead of the traditional foo and bar.
+As well as this, the official Python documentation often contains various 
+obscure Monty Python references.</p>
+
+<blockquote>
+  <p><strong>Jargon</strong></p>
+
+  <p>The program is known as an interpreter because it interprets 
+human readable code into computer readable code and executes it. 
+This is in contrast to <em>compiled</em> programming languages like C, C++, 
+and Java which split this process up into a compile step (conversion of 
+human-readable code into computer code) and a separate execution step, which 
+is what happens when you press on a typical program executable, or run a 
+Java class file using the Java Virtual Machine.</p>
+</blockquote>
+
+<p>Because of it’s focus on code readability and highly expressive syntax 
+(meaning that programmers can write less code than would be required with 
+languages like C or Java), Python has grown hugely in popularity and 
+is now one of the most popular programming languages in use.</p>
+
+<h2 id="why-python--motivation">Why Python? : Motivation</h2>
+
+<p>Now that we know roughly what Python is, why is Python of interest to 
+us as researchers?</p>
+
+<p>For users of specialist packages like Matlab, Stata, R, the answer
+might be because Python offers in most cases a similar performance 
+and range of functions, 
+while providing a much wider range of additional functionality. Plus
+compared with Matlab or Stata, Python is open-source and free.</p>
+
+<p>If you come from a low(or lower)-level computing background like C++, 
+Java, Fortran, then Python is great at accelerating development and 
+prototyping time, and the ability to “glue” together routines written 
+in Fortan or C++ offer the best of both worlds.</p>
+
+<p>Lastly, if you’re not from either of these backgrounds, then let’s 
+provide a sample of what you can do with Python for a 
+typical research project:</p>
+
+<ul>
+  <li>A huge number of libraries means that data readers and writers 
+have been written for a wide range of data formats.</li>
+  <li>Once data is loaded, numerical analysis libraries allow 
+statistical analysis and modelling to be performed</li>
+  <li>The resulting analyses can be turned into plots using Matplotlib
+or one of a growing number of alternative plotting libraries. These
+plots can generally be saved as images (PNG, JPG) or PDFs.</li>
+  <li>The above process is trivial to perform in batch over whole directory
+trees</li>
+  <li>User interface and web application libraries mean that instead of running
+command line scripts, you can develop rich graphical interfaces for your 
+collaborators, including web-pages.</li>
+</ul>
+
+<p><strong>Example: with just 13 lines of Python (plus comments), we are able to write 
+a realistic script to 
+loop over all CSV files in a folder (and subfolders), and 
+generate a statistical plot for each one, including titles etc!</strong></p>
+
+<p><img src="images/sample_result.png" alt="Sample result" /></p>
+
+<p>(“Time-series” generated using <code class="highlighter-rouge">numpy</code>s random number generator).</p>
+
+<!-- Button trigger modal -->
+<p><button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#modalsampleCode">
+    See Code 
+</button></p>
+
+<!-- Modal -->
+<div class="modal fade" id="modalsampleCode" tabindex="-1" role="dialog" aria-labelledby="modalsampleCodeLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="modalsampleCodeLabel">Sample Code</h4>
+      </div>
+      <div class="modal-body">
+
+        <p><strong>Note: lines starting with a hash (#) are just comments - 
+text useful for other developer and is not executed</strong></p>
+
+        <p>In code:</p>
+
+        <div class="language-py highlighter-rouge"><pre class="highlight"><code><span class="c"># Modules we're going to use</span>
+<span class="kn">import</span> <span class="nn">os</span><span class="o">,</span> <span class="nn">numpy</span><span class="o">,</span> <span class="nn">pylab</span>
+<span class="c"># Matplotlib's default style is a bit ugly, use the R's</span>
+<span class="c"># ggplot2-inspired style!</span>
+<span class="n">pylab</span><span class="o">.</span><span class="n">style</span><span class="o">.</span><span class="n">use</span><span class="p">(</span><span class="s">'ggplot'</span><span class="p">)</span>
+
+<span class="c"># "Walk" through the entire directory tree</span>
+<span class="k">for</span> <span class="n">root</span><span class="p">,</span> <span class="n">dirs</span><span class="p">,</span> <span class="n">filenames</span> <span class="ow">in</span> <span class="n">os</span><span class="o">.</span><span class="n">walk</span><span class="p">(</span><span class="s">"/datapath"</span><span class="p">):</span>
+    <span class="c"># Work on csv (comma separated value) files </span>
+    <span class="k">for</span> <span class="n">filename</span> <span class="ow">in</span> <span class="nb">filter</span><span class="p">(</span><span class="k">lambda</span> <span class="n">f</span><span class="p">:</span> <span class="n">endswith</span><span class="p">(</span><span class="s">".csv"</span><span class="p">,</span> <span class="n">filenames</span><span class="p">)):</span>
+        <span class="c"># Load 2d time-series data into an array using Numpy</span>
+        <span class="c"># (time is along 2nd dimension)</span>
+        <span class="n">data</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">loadtxt</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="n">delimiter</span><span class="o">=</span><span class="s">","</span><span class="p">)</span>
+        <span class="c"># Get some stats</span>
+        <span class="n">means</span>   <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">axis</span><span class="o">=-</span><span class="mi">1</span><span class="p">)</span>
+        <span class="n">stdevs</span>  <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">std</span><span class="p">(</span><span class="n">axis</span><span class="o">=-</span><span class="mi">1</span><span class="p">)</span>
+        <span class="n">stderrs</span> <span class="o">=</span> <span class="n">stdevs</span> <span class="o">/</span> <span class="n">numpy</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
+
+        <span class="c"># Make bar plots with errorbars</span>
+        <span class="n">pylab</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]),</span> <span class="n">means</span><span class="p">,</span> <span class="n">yerr</span><span class="o">=</span><span class="n">stderrs</span><span class="p">)</span>
+        
+        <span class="c"># Add in labels and title</span>
+        <span class="n">pylab</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s">"Timeseries index"</span><span class="p">)</span>
+        <span class="n">pylab</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s">"Mean (over time)"</span><span class="p">)</span>
+        <span class="n">pylab</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s">"Time-series means with standard deviations"</span><span class="p">)</span>
+
+        <span class="c"># Save the plot as a PDF</span>
+        <span class="c"># in the data folder with a datafile specific filename</span>
+        <span class="n">pylab</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">root</span><span class="p">,</span> <span class="n">filename</span> <span class="o">+</span> <span class="s">"_result.pdf"</span><span class="p">))</span>
+</code></pre>
+        </div>
+
+      </div>
+        
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- End Modal -->
+
+<p>In addition, this was using general numerical libraries; with a specialist 
+library like <strong>Pandas</strong> this could probably have been reduced further.</p>
+
+<p>While these modules won’t be covered until the advanced sessions, 
+these introductory sessions lay the groundwork for being able to 
+use these modules.</p>
+
+<h2 id="aims">Aims</h2>
+
+<p>This course aims to teach you how to use basic Python including</p>
+
+<ul>
+  <li>Writing scripts</li>
+  <li>Python variable types</li>
+  <li>Control flow (<code class="highlighter-rouge">if</code>, <code class="highlighter-rouge">for</code>, <code class="highlighter-rouge">while</code>)</li>
+  <li>Reading and writing files</li>
+  <li>Functions (using and writing!)</li>
+  <li>Commenting and documenting code</li>
+  <li>Working with modules</li>
+</ul>
+
+<p>We will not be delivering hours of lectures on programming constructs and
+theory, or detailing how every function of every module works.</p>
+
+<div class="important-section">
+Instead the aim of this workshop is to provide an environment for **you** 
+to learn to program, with help at hand when you need it, and some introductory 
+exercises and notes to help you get started. 
+</div>
+
+<h3 id="printing-the-notes">Printing the notes</h3>
+
+<p>For both environmental reasons and to ensure that you have the most 
+up-to-date version, we recommend that you work from the online version of
+these notes.</p>
+
+<p>However, if you wish to have a hard copy, you may download a pdf version
+of the notes from here : [python_2016__<em>introduction_to_python.pdf](/python_2016</em>__introduction_to_python.pdf) and print them.</p>
+
+<h3 id="errata">Errata</h3>
+
+<p>Please email any typos, mistakes, broken links or other suggestions to
+<a href="mailto:j.metz@exeter.ac.uk">j.metz@exeter.ac.uk</a>.</p>
+
+<h3 id="installing-on-your-own-machine">Installing on your own machine</h3>
+
+<p>If you want to use Python on your own computer I would recommend using
+one of the following “distributions” of Python, rather than just the 
+basic Python interpreter.</p>
+
+<p>Amongst other things, these distributions take the pain out of getting 
+started because they include all modules you’re likely to need to get started
+as well as links to pre-configured consoles that make running Python a breeze.</p>
+
+<ul>
+  <li><a href="https://www.continuum.io/downloads">Anaconda (Win, MacOS, Linux)</a> : Commercially backed free distribution</li>
+  <li><a href="https://winpython.github.io/">WinPython (Windows Only)</a> : Open-source free distribution</li>
+  <li>Linux : Python 2 is pre-installed on most linux distributions; to install Python 3, simply use your favourite package manager. E.g. on Debian based systems (Debian, Ubuntu, Mint), running <code class="highlighter-rouge">sudo apt-get install python3</code> from a terminal will install Python 3. Alternatively use Anaconda.</li>
+</ul>
+
+<p><strong>Note</strong> : Be sure to download the Python <strong>3</strong>, not 2, and get the correct architecture for your machine (i.e. 32 or 64 bit).</p>
+
+      <!-- NEXT AND PREVIOUS -->
+      
+         
+          <span class="btn btn-default next-link">
+            <a rel="next" href="/intropython2016/01_getting_started.html">Next Page</a>
+          </span>
+        
+      </div>
+    </main>
+
+    <footer>
+      <hr />
+      <p>&copy; <time>2016</time> J. Metz</p>
+    </footer>
+    <!--script src="/scripts.js"></script-->
+  </body>
+</html>
