@@ -1,7 +1,5 @@
 ---
 ---
 {% for post in site.posts %}
-<ul>
-* ({{ post.title }})["{{post.url}}"]
-</ul>
+({{ post.title }})["{{post.url}}"]
 {% endfor %}
