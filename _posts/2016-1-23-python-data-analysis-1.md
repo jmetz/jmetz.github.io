@@ -1,3 +1,6 @@
+---
+layout: default
+---
 # Python 2016: Advanced Python & Data Analysis
 
 [![XKCDSW comic](/images/python.png)](http://xkcdsw.com/77)
