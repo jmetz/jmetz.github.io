@@ -38,13 +38,20 @@
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
                   Content <span class="caret"></span></a>
               <ul class="dropdown-menu">
-                {##% for tutorial in site.collections %##}
+                {%  comment %}
+                {% for tutorial in site.collections %}
+                {%  endcomment %}
                 <li>
-                  {## % assign firstpage = tutorial.docs.first %##}
-                  {##<{{ a href="{{ firstpage.url }}">{{ tutorial.title }}</a>##}
+                  {%  comment %}
+                  {% assign firstpage = tutorial.docs.first %}
+                  <{{ a href="{{ firstpage.url }}">{{ tutorial.title }}</a>%}
+                  {%  endcomment %}
                   <a href="posts">Blog Posts</a>
+                {%  comment %}    
                 </li>
-                {##% endfor %##}
+                {% endfor %}
+                {%  endcomment %}
+             
               </ul>
             </li>
           </ul>
