@@ -3,8 +3,9 @@ title: J. Metz's site
 layout: default
 ---
 
-Welcome to my website. 
+Hi! My name is Jeremy, and I work as an Image Processing specialist at the University of Exeter's 
+Biosciences department - welcome to my website. 
 
-This site is currently under construction. 
+Most of my content is currently in the form of blog posts.
 
-In the meantime, visit my bio at the [University of Exeter](http://www.exeter.ac.uk/biomedicalhub/team/drjeremymetz/)
+Please alsp visit my bio at the [University of Exeter](http://www.exeter.ac.uk/biomedicalhub/team/drjeremymetz/)
