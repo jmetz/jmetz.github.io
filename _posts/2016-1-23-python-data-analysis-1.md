@@ -3,7 +3,7 @@ layout: default
 ---
 # Python 2016: Advanced Python & Data Analysis
 
-[![XKCDSW comic](/images/python.png)](http://xkcdsw.com/77)
+[![XKCDSW comic](https://imgs.xkcd.com/comics/python.png](https://xkcd.com/353/)
 
 ## Introduction
 
