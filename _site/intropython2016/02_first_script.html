@@ -119,7 +119,7 @@ WHILE n is more than 1
 
   <p>while the python code is</p>
 
-  <div class="language-py highlighter-rouge"><pre class="highlight"><code><span class="n">fact</span> <span class="o">=</span> <span class="n">n</span>
+  <div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">fact</span> <span class="o">=</span> <span class="n">n</span>
 <span class="k">while</span> <span class="n">n</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">:</span>
     <span class="n">fact</span> <span class="o">=</span> <span class="n">fact</span> <span class="o">*</span> <span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
     <span class="n">n</span>    <span class="o">=</span> <span class="n">n</span> <span class="o">-</span> <span class="mi">1</span>
@@ -159,8 +159,8 @@ some code!</p>
 
 <p>First of all, enter:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code># Author: Your Name &lt;your@email.address&gt;
-# This is a script to test that Python is working
+<div class="language-py highlighter-rouge"><pre class="highlight"><code><span class="c"># Author: Your Name &lt;your@email.address&gt;</span>
+<span class="c"># This is a script to test that Python is working</span>
 </code></pre>
 </div>
 
@@ -194,23 +194,23 @@ you’re about to see why!</p>
       <th>What it does</th>
   </tr>
   <tr>
-      <td>`cd FOLDER_NAME`</td>
-      <td>`cd FOLDER_NAME`</td>
+      <td><code>cd FOLDER_NAME</code></td>
+      <td><code>cd FOLDER_NAME</code></td>
       <td>Change directory to FOLDER_NAME </td>
   </tr>
   <tr>
-      <td>`dir [FOLDER_NAME]`</td>
-      <td>`ls [FOLDER_NAME]`</td>
+      <td><code>dir [FOLDER_NAME]</code></td>
+      <td><code>ls [FOLDER_NAME]</code></td>
       <td>List folder contents; if FOLDER_NAME<br />is omitted, list current folder contents</td>
   </tr>
   <tr>
-      <td>`..`</td>
-      <td>`..`</td>
-      <td>Reference to parent folder. E.g. `cd ..`<br />is how you would navigate from `/a/b/c/` to<br />`/a/b/` if you are currently in `/a/b/c/`.</td>
+      <td><code>..</code></td>
+      <td><code>..</code></td>
+      <td>Reference to parent folder. E.g. <code>cd ..</code><br />is how you would navigate from <code>/a/b/c/</code> to <code>/a/b/</code><br />(if you are currently in <code>/a/b/c/</code>).</td>
   </tr>
   <tr>
-      <td>`mkdir FOLDER_NAME`</td>
-      <td>`mkdir FOLDER_NAME`</td>
+      <td><code>mkdir FOLDER_NAME</code></td>
+      <td><code>mkdir FOLDER_NAME</code></td>
       <td>Create a folder called FOLDER_NAME</td>
   </tr>
 </table>
@@ -222,15 +222,15 @@ you’re about to see why!</p>
   <p><strong>Folder</strong> and <strong>directory</strong> refer to the same thing, while 
 <strong>full path</strong> or <strong>absolute path</strong> means the full directory 
 location. E.g. if you’re currently in your Desktop folder, the folder is 
-Desktop, but the full path is something like <code class="highlighter-rouge">/users/joe/Desktop</code>. 
+Desktop, but the full path is something like <code>/users/joe/Desktop</code>. 
 If you’re on Windows the path starts with a drive letter too, like 
-“C:” or “U:”, and the forward-slashes will be backslashes instead.</p>
+<code>C:</code> or <code>U:</code>, and the forward-slashes will be backslashes instead.</p>
 
   <p><strong>Console</strong> and <strong>terminal</strong> (and sometimes <strong>shell</strong>) are usually 
 used interchangeably to mean 
 the same thing; the text-based interface where commands can be entered. 
 In windows, the built-in console is also called the “command prompt” 
-and is started using <code class="highlighter-rouge">cmd.exe</code>.</p>
+and is started using <code>cmd.exe</code>.</p>
 
   <p>For our purposes, we’re going to be mainly interested in the terminal console 
 which is where we type commands like <code class="highlighter-rouge">cd</code>, or <code class="highlighter-rouge">dir</code>.</p>
@@ -260,7 +260,7 @@ using the <strong>windows</strong> terminal command <code class="highlighter-rou
 
 <p>Change directory into the <code class="highlighter-rouge">python_workshop</code> folder using</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>cd python_workshop
+<div class="language-shell highlighter-rouge"><pre class="highlight"><code><span class="nb">cd </span>python_workshop
 </code></pre>
 </div>
 <p>and verify that our new file is there using <code class="highlighter-rouge">dir</code>.</p>
@@ -283,7 +283,7 @@ in the follow-on workshop.</p>
 
 <p>We can now type</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>python exercise_hello_world.py
+<div class="language-shell highlighter-rouge"><pre class="highlight"><code>python exercise_hello_world.py
 </code></pre>
 </div>
 

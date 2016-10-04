@@ -41,7 +41,7 @@ to let programs know that it holds Python code.
 > 
 > while the python code is
 >
-> ```py
+> ```python
 > fact = n
 > while n > 1:
 >     fact = fact * (n-1)
@@ -82,9 +82,10 @@ some code!
 
 First of all, enter: 
 
-
-    # Author: Your Name <your@email.address>
-    # This is a script to test that Python is working
+```py
+# Author: Your Name <your@email.address>
+# This is a script to test that Python is working
+```
 
 replacing the text in the line starting `# Author` with your details. 
 
@@ -115,23 +116,23 @@ A terminal window should pop up, that looks a little bit like
 >       <th>What it does</th>
 >   </tr>
 >   <tr>
->       <td>`cd FOLDER_NAME`</td>
->       <td>`cd FOLDER_NAME`</td>
+>       <td><code>cd FOLDER_NAME</code></td>
+>       <td><code>cd FOLDER_NAME</code></td>
 >       <td>Change directory to FOLDER_NAME </td>
 >   </tr>
 >   <tr>
->       <td>`dir [FOLDER_NAME]`</td>
->       <td>`ls [FOLDER_NAME]`</td>
+>       <td><code>dir [FOLDER_NAME]</code></td>
+>       <td><code>ls [FOLDER_NAME]</code></td>
 >       <td>List folder contents; if FOLDER_NAME<br>is omitted, list current folder contents</td>
 >   </tr>
 >   <tr>
->       <td>`..`</td>
->       <td>`..`</td>
->       <td>Reference to parent folder. E.g. `cd ..`<br>is how you would navigate from `/a/b/c/` to<br>`/a/b/` if you are currently in `/a/b/c/`.</td>
+>       <td><code>..</code></td>
+>       <td><code>..</code></td>
+>       <td>Reference to parent folder. E.g. <code>cd ..</code><br>is how you would navigate from <code>/a/b/c/</code> to <code>/a/b/</code><br>(if you are currently in <code>/a/b/c/</code>).</td>
 >   </tr>
 >   <tr>
->       <td>`mkdir FOLDER_NAME`</td>
->       <td>`mkdir FOLDER_NAME`</td>
+>       <td><code>mkdir FOLDER_NAME</code></td>
+>       <td><code>mkdir FOLDER_NAME</code></td>
 >       <td>Create a folder called FOLDER_NAME</td>
 >   </tr>
 > </table>
@@ -142,15 +143,15 @@ A terminal window should pop up, that looks a little bit like
 > **Folder** and **directory** refer to the same thing, while 
 > **full path** or **absolute path** means the full directory 
 > location. E.g. if you're currently in your Desktop folder, the folder is 
-> Desktop, but the full path is something like `/users/joe/Desktop`. 
+> Desktop, but the full path is something like <code>/users/joe/Desktop</code>. 
 > If you're on Windows the path starts with a drive letter too, like 
-> "C:" or "U:", and the forward-slashes will be backslashes instead. 
+> <code>C:</code> or <code>U:</code>, and the forward-slashes will be backslashes instead. 
 > 
 > **Console** and **terminal** (and sometimes **shell**) are usually 
 > used interchangeably to mean 
 > the same thing; the text-based interface where commands can be entered. 
 > In windows, the built-in console is also called the "command prompt" 
-> and is started using `cmd.exe`. 
+> and is started using <code>cmd.exe</code>. 
 > 
 > For our purposes, we're going to be mainly interested in the terminal console 
 > which is where we type commands like `cd`, or `dir`.
@@ -180,7 +181,7 @@ in the output.
 
 Change directory into the `python_workshop` folder using
 
-```
+```shell
 cd python_workshop
 ```
 and verify that our new file is there using `dir`.
@@ -201,7 +202,7 @@ In most simple use cases, we just use a single input argument; the script file n
 
 We can now type 
 
-```
+```shell
 python exercise_hello_world.py
 ```
 

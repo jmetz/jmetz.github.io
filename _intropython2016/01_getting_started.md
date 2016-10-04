@@ -67,13 +67,13 @@ quickly find the answers you need.
 
 Resources I often use are: 
 
-* Official Python documentation (very extensive!) : https://docs.python.org/3/
-* Stack overflow (Programmer Q&A; Python tag) : http://stackoverflow.com/questions/tagged/python
+* Official Python documentation (very extensive!) : <a href="https://docs.python.org/3/" target="_blank">https://docs.python.org/3/</a>
+* Stack overflow (Programmer Q&A; Python tag) : <a href="http://stackoverflow.com/questions/tagged/python" target="_blank">http://stackoverflow.com/questions/tagged/python</a>
 * Various blogs e.g. 
-    * Planet Python     : http://planetpython.org/
-    * Doug Hellmann     : https://doughellmann.com/blog/
-    * Effbot            : http://effbot.org/
-    * Mouse vs Python   : http://www.blog.pythonlibrary.org/
+    * Planet Python     : <a href="http://planetpython.org/" target="_blank">http://planetpython.org/</a>
+    * Doug Hellmann     : <a href="https://doughellmann.com/blog/" target="_blank">https://doughellmann.com/blog/</a>
+    * Effbot            : <a href="http://effbot.org/" target="_blank">http://effbot.org/</a>
+    * Mouse vs Python   : <a href="http://www.blog.pythonlibrary.org/" target="_blank">http://www.blog.pythonlibrary.org/</a>
 
 
 > **Advanced Users**
