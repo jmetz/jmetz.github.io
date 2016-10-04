@@ -30,18 +30,18 @@ The steps involved in reducing noise are summarized below;
 
 If we take the original Blobs sample data set
 
-![Original blobs](images/original_blobs.jpg)
+![Original blobs](/images/original_blobs.jpg)
 original_blobs
 
 and add a lot of noise (standard deviation = 100)
 
-![Noisy blobs](images/noisy_blobs.jpg)
+![Noisy blobs](/images/noisy_blobs.jpg)
 noisy_blobs
 
 we see that this image would be very difficult to analyse as is (e.g. applying a threshold now would produce a very inaccurate segmentation).
 
 By applying  a median filter we recover, to some extent, the underlying pattern;
 
-![Denoised blobs](images/denoised_blobs.jpg)
+![Denoised blobs](/images/denoised_blobs.jpg)
 denoised_blobs
 
